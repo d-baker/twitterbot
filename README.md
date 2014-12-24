@@ -45,12 +45,16 @@ Cool! you're ready to start using twitterbot!
 
    Some methods that are useful here:
    ```
-   self.post_tweet(text)                    # post some tweet
-   self.post_tweet(text, reply_to=tweet)    # respond to a tweet
+   self.post_tweet(text)                    				# post some tweet
+   self.post_tweet(text, reply_to=tweet)   	 				# respond to a tweet
 
-   self.favorite(tweet)                     # favorite a tweet
+   self.favorite(tweet)                     				# favorite a tweet
 
-   self.log(message)                        # write something to the log file
+   self.retweet_tweet(tweet)								# retweet a tweet
+
+   self.get_user_timeline(username, include_rts, count)		# retrieve timeline of a specific user
+
+   self.log(message)                        				# write something to the log file
    ```
 
    Remember to remove the `NotImplementedError` exceptions once you've
