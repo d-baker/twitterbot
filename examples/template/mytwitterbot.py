@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 from twitterbot import TwitterBot
+import logging # needed for configuring logging level
 
 class MyTwitterBot(TwitterBot):
     def bot_init(self):
