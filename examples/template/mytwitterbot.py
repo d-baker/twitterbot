@@ -47,6 +47,9 @@ class MyTwitterBot(TwitterBot):
         # follow back all followers?
         self.config['autofollow'] = False
 
+        # customise logging level
+        self.config['logging_level'] = logging.INFO
+
         ###########################################
         # CUSTOM: your bot's own state variables! #
         ###########################################
