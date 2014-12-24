@@ -211,6 +211,22 @@ class TwitterBot:
             self._log_tweepy_error('Can\'t fav status', e)
 
 
+    def retweet_tweet(self, tweet):
+        try:
+            logging.info('Retweeting ' + self._tweet_url(tweet))
+            self.api.retweet(tweet.id)
+
+        except tweepy.TweepError as e:
+            self._log_tweepy_error('Can\'t retweet status', e)
+
+
+    # get the timeline of a specific user in order to interact with their tweets
+    def get_user_timeline(self, username, inc_rts, c):
+        try:
+            logging.info('Retrieving timeline of ' + username)
+            return self.api.user_timeline(screen_name=username, include_rts=inc_rts, count=c)
+        except tweepy.TweepError as e:
+            self._log_tweepy_error('Can\'t retrieve timeline', e)
     def _ignore_method(self, method):
         return hasattr(method, 'not_implemented') and method.not_implemented
 
