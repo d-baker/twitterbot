@@ -47,7 +47,6 @@ class MyTwitterBot(TwitterBot):
         # follow back all followers?
         self.config['autofollow'] = False
 
-
         ###########################################
         # CUSTOM: your bot's own state variables! #
         ###########################################
@@ -108,6 +107,11 @@ class MyTwitterBot(TwitterBot):
         # if something:
         #     self.favorite_tweet(tweet)
 
+        # call this to retweet the tweet!
+        # if something:
+        #     self.retweet_tweet(tweet)
+
+
         raise NotImplementedError("You need to implement this to reply to/fav mentions (or pass if you don't want to)!")
 
 
@@ -135,6 +139,10 @@ class MyTwitterBot(TwitterBot):
         # call this to fav the tweet!
         # if something:
         #     self.favorite_tweet(tweet)
+
+        # call this to retweet the tweet!
+        # if something:
+        #     self.retweet_tweet(tweet)
 
         raise NotImplementedError("You need to implement this to reply to/fav timeline tweets (or pass if you don't want to)!")
 
